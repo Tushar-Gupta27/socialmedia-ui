@@ -35,7 +35,7 @@ function Post({ postItem }) {
   const userIdCheck = user?.profile?._id || user?.profile?.googleId;
   const hasLiked = postItem.likes.find((id) => id === userIdCheck);
   function openPost() {
-    navigate(`/posts/${postItem._id}`);
+    navigate(`/socialmedia-ui/posts/${postItem._id}`);
   }
   function handleLike() {
     //doing this to create an instant response for user, while the backend updates while taking its time

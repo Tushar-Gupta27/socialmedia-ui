@@ -23,13 +23,23 @@ function App() {
     <Container maxWidth="xl" sx={{ padding: "0 0 20px 0" }}>
       <Navbar />
       <Routes>
-        <Route path="/" exact element={<Navigate to="/posts" />} />
-        <Route path="/posts" element={<Home />} />
-        <Route path="/posts/s" element={<Home />} />
-        <Route path="/posts/:id" element={<PostDetails />} />
+        <Route
+          path="/socialmedia-ui"
+          exact
+          element={<Navigate to="/socialmedia-ui/posts" />}
+        />
+        <Route path="/socialmedia-ui/posts" element={<Home />} />
+        <Route path="/socialmedia-ui/posts/s" element={<Home />} />
+        <Route path="/socialmedia-ui/posts/:id" element={<PostDetails />} />
         <Route
           path="/auth"
-          element={user ? <Navigate to="/posts" replace={true} /> : <Auth />}
+          element={
+            user ? (
+              <Navigate to="/socialmedia-ui/posts" replace={true} />
+            ) : (
+              <Auth />
+            )
+          }
         />
       </Routes>
     </Container>

@@ -67,7 +67,7 @@ export const createPostAction = (post, navigate) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
     const { data } = await api.createPost(post);
-    navigate(`/posts/${data._id}`);
+    navigate(`/socialmedia-ui/posts/${data._id}`);
     dispatch({ type: CREATE, payload: data });
     dispatch({ type: END_LOADING });
   } catch (err) {
@@ -79,7 +79,7 @@ export const updatePostAction =
   (id, updatedPost, navigate) => async (dispatch) => {
     try {
       const { data } = await api.updatePost(id, updatedPost);
-      navigate(`/posts/${data._id}`);
+      navigate(`/socialmedia-ui/posts/${data._id}`);
       dispatch({ type: UPDATE, payload: data });
     } catch (err) {
       console.log(err);

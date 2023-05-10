@@ -27,7 +27,7 @@ export const signInAction = (formData, navigate) => async (dispatch) => {
   try {
     const { data } = await axiosAPI.post("/user/signin", formData);
     dispatch({ type: AUTH, payload: data });
-    navigate("/");
+    navigate("/socialmedia-ui");
   } catch (error) {
     console.log(error);
   }
@@ -36,7 +36,7 @@ export const signUpAction = (formData, navigate) => async (dispatch) => {
   try {
     const { data } = await axiosAPI.post("/user/signup", formData);
     dispatch({ type: AUTH, payload: data });
-    navigate("/");
+    navigate("/socialmedia-ui");
   } catch (error) {
     console.log(error.message);
   }

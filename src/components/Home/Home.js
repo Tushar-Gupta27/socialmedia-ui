@@ -63,7 +63,9 @@ function Home() {
     if (search.trim() || tags.length !== 0 || location.search) {
       if (search.trim() || tags.length !== 0) {
         dispatch(getPostsBySearchAction({ search, tags: tags.join(",") }));
-        navigate(`/posts/s?searchQuery=${search}&tags=${tags.join(",")}`);
+        navigate(
+          `/socialmedia-ui/posts/s?searchQuery=${search}&tags=${tags.join(",")}`
+        );
       } else if (location.search && location.pathname === "/posts/s") {
         dispatch(
           getPostsBySearchAction({
@@ -73,7 +75,7 @@ function Home() {
         );
       }
     } else {
-      navigate("/posts");
+      navigate("/socialmedia-ui/posts");
     }
   }
 

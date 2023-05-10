@@ -25,7 +25,7 @@ function Paginate({ page }) {
         <PaginationItem
           {...item}
           component={Link}
-          to={`/posts?page=${item.page}`}
+          to={`/socialmedia-ui/posts?page=${item.page}`}
         />
       )}
     />

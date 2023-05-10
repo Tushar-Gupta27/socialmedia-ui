@@ -39,7 +39,7 @@ function PostDetails() {
   }, [post]);
 
   function openPost(id) {
-    navigate(`/posts/${id}`);
+    navigate(`/socialmedia-ui/posts/${id}`);
   }
   const recommendedPosts = posts?.filter((post) => post._id !== id);
 

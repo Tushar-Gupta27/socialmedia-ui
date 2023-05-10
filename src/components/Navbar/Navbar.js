@@ -32,7 +32,7 @@ function Navbar() {
 
   function handleLogout() {
     dispatch({ type: "LOGOUT" });
-    navigate("/posts");
+    navigate("/socialmedia-ui/posts");
   }
 
   return (
@@ -41,7 +41,7 @@ function Navbar() {
         <img style={ImageSyles} src={memories} alt="memories" />
         <Typography
           component={Link}
-          to="/posts"
+          to="/socialmedia-ui/posts"
           sx={HeadingStyles}
           variant="h2"
           align="center"
@@ -75,7 +75,7 @@ function Navbar() {
             variant="contained"
             color="primary"
             component={Link}
-            to="/auth"
+            to="/socialmedia-ui/auth"
           >
             Sign In
           </Button>

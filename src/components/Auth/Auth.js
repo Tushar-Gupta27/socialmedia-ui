@@ -74,7 +74,7 @@ function Auth() {
     const token = response?.tokenId;
     try {
       dispatch(setAuthAction(profile, token));
-      navigate("/");
+      navigate("/socialmedia-ui");
     } catch (error) {
       console.log(error);
     }
