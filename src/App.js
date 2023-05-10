@@ -26,7 +26,7 @@ function App() {
         <Route
           path="/socialmedia-ui"
           exact
-          element={<Navigate to="/posts" />}
+          element={<Navigate to="/socialmedia-ui/posts" />}
         />
         <Route path="/socialmedia-ui/posts" element={<Home />} />
         <Route path="/socialmedia-ui/posts/s" element={<Home />} />
