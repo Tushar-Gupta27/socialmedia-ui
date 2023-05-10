@@ -43,7 +43,7 @@ function PostDetails() {
   }
   const recommendedPosts = posts?.filter((post) => post._id !== id);
 
-  if (!post) return <div>No POST</div>;
+  if (!post) return <div>LOADING...</div>;
   if (isLoading)
     return (
       <Paper elevation={6} sx={LoadingPaperStyles}>

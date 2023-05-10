@@ -44,17 +44,17 @@ function Comments({ post }) {
           <Typography gutterBottom variant="h6">
             Comments
           </Typography>
-          {comments.map((c, i) => (
+          {comments.length>0 ? comments.map((c, i) => (
             <Typography key={i} gutterBottom variant="subtitle2">
               <strong>{c.split(": ")[0]}:</strong> {c.split(": ")[1]}
             </Typography>
-          ))}
+          )):<p>No Comments</p>}
           <div
             ref={commentsRef}
             style={{ scrollPadding: "0", scrollMargin: "0" }}
           />
         </div>
-        {user && (
+        {user ? (
           <div style={{ width: "70%" }}>
             <Typography gutterBottom variant="subtitle2">
               Write a Comment!
@@ -79,7 +79,7 @@ function Comments({ post }) {
               Comment
             </Button>
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );

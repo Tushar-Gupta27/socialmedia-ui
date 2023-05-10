@@ -36,7 +36,7 @@ export const CommentsOuterContainerStyles = {
 };
 export const CommentsInnerContainerStyles = {
   maxWidth: "250px",
-  height: "200px",
+  minheight: "100px",
   overflowY: "auto",
   paddingRight: "15px",
   marginRight: "30px",

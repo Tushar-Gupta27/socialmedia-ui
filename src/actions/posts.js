@@ -12,8 +12,8 @@ import {
   COMMENT,
   LIKE,
 } from "../constants/actionTypes";
-
-const axiosAPI = axios.create({ baseURL: "http://localhost:8000" });
+import { API_PATH } from "../util";
+const axiosAPI = axios.create({ baseURL: API_PATH });
 axiosAPI.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
     req.headers.authorization = `Bearer ${
@@ -55,7 +55,7 @@ export const getPostsBySearchAction = (searchQuery) => async (dispatch) => {
 export const getPostAction = (id) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
-    const { data } = await axios.get(`http://localhost:8000/posts/${id}`);
+    const { data } = await axios.get(`${API_PATH}/posts/${id}`);
     dispatch({ type: FETCH_POST, payload: data });
     dispatch({ type: END_LOADING });
   } catch (error) {

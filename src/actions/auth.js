@@ -1,8 +1,9 @@
 import { AUTH } from "../constants/auth";
 import axios from "axios";
+import {API_PATH} from "../util"
 //INSTANCE
 const axiosAPI = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: API_PATH,
   headers: { Authorization: `Bearer` },
 });
 //INTERCEPTORS

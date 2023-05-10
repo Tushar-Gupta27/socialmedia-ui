@@ -1,7 +1,7 @@
 import axios from "axios";
-
+import { API_PATH } from "../util";
 //creating an instance of axios for easy access and clean code
-const axiosAPI = axios.create({ baseURL: "http://localhost:8000" });
+const axiosAPI = axios.create({ baseURL: API_PATH });
 axiosAPI.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
     req.headers.authorization = `Bearer ${
