@@ -26,13 +26,13 @@ function App() {
         <Route
           path="/socialmedia-ui"
           exact
-          element={<Navigate to="/socialmedia-ui/posts" />}
+          element={<Navigate to="/posts" />}
         />
         <Route path="/socialmedia-ui/posts" element={<Home />} />
         <Route path="/socialmedia-ui/posts/s" element={<Home />} />
         <Route path="/socialmedia-ui/posts/:id" element={<PostDetails />} />
         <Route
-          path="/auth"
+          path="/socialmedia-ui/auth"
           element={
             user ? (
               <Navigate to="/socialmedia-ui/posts" replace={true} />
